@@ -71,6 +71,8 @@ Pruebas unitarias
 ```shell
 # En Proceso
 ```
+Pruebas de carga
+
 ## Estado CI
 
 | Develop | Relese 0.0.1 | Master |
