@@ -17,7 +17,6 @@ type Requisito struct {
 	CodigoAbreviacion string  `orm:"column(codigo_abreviacion);null"`
 	Activo            bool    `orm:"column(activo)"`
 	NumeroOrden       float64 `orm:"column(numero_orden);null"`
-	Formato           string  `orm:"column(formato);type(json);null"`
 	FechaCreacion     string  `orm:"column(fecha_creacion);null"`
 	FechaModificacion string  `orm:"column(fecha_modificacion);null"`
 }

@@ -13,9 +13,9 @@ import (
 type EntrevistadorEntrevista struct {
 	Id                int            `orm:"column(id);pk;auto"`
 	EntrevistadorId   *Entrevistador `orm:"column(entrevistador_id);rel(fk)"`
-	NotaParcial       float64        `orm:"column(nota_parcial)"`
 	EntrevistaId      *Entrevista    `orm:"column(entrevista_id);rel(fk)"`
 	Activo            bool           `orm:"column(activo)"`
+	NotaParcial       float64        `orm:"column(nota_parcial);null"`
 	FechaCreacion     string         `orm:"column(fecha_creacion);null"`
 	FechaModificacion string         `orm:"column(fecha_modificacion);null"`
 }

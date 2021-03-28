@@ -188,179 +188,6 @@
                 }
             }
         },
-        "/detalle_evaluacion/": {
-            "get": {
-                "tags": [
-                    "detalle_evaluacion"
-                ],
-                "description": "get DetalleEvaluacion",
-                "operationId": "DetalleEvaluacionController.Get All",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "query",
-                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "fields",
-                        "description": "Fields returned. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "sortby",
-                        "description": "Sorted-by fields. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "order",
-                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "description": "Limit the size of result set. Must be an integer",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "description": "Start position of result set. Must be an integer",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DetalleEvaluacion"
-                        }
-                    },
-                    "403": {
-                        "description": ""
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "detalle_evaluacion"
-                ],
-                "description": "create DetalleEvaluacion",
-                "operationId": "DetalleEvaluacionController.Post",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DetalleEvaluacion content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DetalleEvaluacion"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "{int} models.DetalleEvaluacion"
-                    },
-                    "403": {
-                        "description": "body is empty"
-                    }
-                }
-            }
-        },
-        "/detalle_evaluacion/{id}": {
-            "get": {
-                "tags": [
-                    "detalle_evaluacion"
-                ],
-                "description": "get DetalleEvaluacion by id",
-                "operationId": "DetalleEvaluacionController.Get One",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The key for staticblock",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DetalleEvaluacion"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is empty"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "detalle_evaluacion"
-                ],
-                "description": "update the DetalleEvaluacion",
-                "operationId": "DetalleEvaluacionController.Put",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to update",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DetalleEvaluacion content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DetalleEvaluacion"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DetalleEvaluacion"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is not int"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "detalle_evaluacion"
-                ],
-                "description": "delete the DetalleEvaluacion",
-                "operationId": "DetalleEvaluacionController.Delete",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to delete",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "{string} delete success!"
-                    },
-                    "403": {
-                        "description": "id is empty"
-                    }
-                }
-            }
-        },
         "/entrevista/": {
             "get": {
                 "tags": [
@@ -1405,7 +1232,7 @@
                     "requisito_programa_academico"
                 ],
                 "description": "get RequisitoProgramaAcademico",
-                "operationId": "RequisitoProgramaAcademicoController.Get All",
+                "operationId": "RequisitoProgramAcademicoController.Get All",
                 "parameters": [
                     {
                         "in": "query",
@@ -1461,7 +1288,7 @@
                     "requisito_programa_academico"
                 ],
                 "description": "create RequisitoProgramaAcademico",
-                "operationId": "RequisitoProgramaAcademicoController.Post",
+                "operationId": "RequisitoProgramAcademicoController.Post",
                 "parameters": [
                     {
                         "in": "body",
@@ -1489,7 +1316,7 @@
                     "requisito_programa_academico"
                 ],
                 "description": "get RequisitoProgramaAcademico by id",
-                "operationId": "RequisitoProgramaAcademicoController.Get One",
+                "operationId": "RequisitoProgramAcademicoController.Get One",
                 "parameters": [
                     {
                         "in": "path",
@@ -1516,7 +1343,7 @@
                     "requisito_programa_academico"
                 ],
                 "description": "update the RequisitoProgramaAcademico",
-                "operationId": "RequisitoProgramaAcademicoController.Put",
+                "operationId": "RequisitoProgramAcademicoController.Put",
                 "parameters": [
                     {
                         "in": "path",
@@ -1552,7 +1379,7 @@
                     "requisito_programa_academico"
                 ],
                 "description": "delete the RequisitoProgramaAcademico",
-                "operationId": "RequisitoProgramaAcademicoController.Delete",
+                "operationId": "RequisitoProgramAcademicoController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -1754,9 +1581,6 @@
                 "Activo": {
                     "type": "boolean"
                 },
-                "CuposEspeciales": {
-                    "type": "string"
-                },
                 "CuposHabilitados": {
                     "type": "integer",
                     "format": "int64"
@@ -1782,41 +1606,6 @@
                 "PeriodoId": {
                     "type": "integer",
                     "format": "int64"
-                }
-            }
-        },
-        "models.DetalleEvaluacion": {
-            "title": "DetalleEvaluacion",
-            "type": "object",
-            "properties": {
-                "Activo": {
-                    "type": "boolean"
-                },
-                "DetalleCalificacion": {
-                    "type": "string"
-                },
-                "EntrevistaId": {
-                    "$ref": "#/definitions/models.Entrevista"
-                },
-                "EvaluacionInscripcionId": {
-                    "$ref": "#/definitions/models.EvaluacionInscripcion"
-                },
-                "FechaCreacion": {
-                    "type": "string"
-                },
-                "FechaModificacion": {
-                    "type": "string"
-                },
-                "Id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "NotaRequisito": {
-                    "type": "number",
-                    "format": "double"
-                },
-                "RequisitoProgramaAcademicoId": {
-                    "$ref": "#/definitions/models.RequisitoProgramaAcademico"
                 }
             }
         },
@@ -1948,6 +1737,9 @@
                 "Activo": {
                     "type": "boolean"
                 },
+                "EntrevistaId": {
+                    "$ref": "#/definitions/models.Entrevista"
+                },
                 "FechaCreacion": {
                     "type": "string"
                 },
@@ -1965,6 +1757,9 @@
                 "NotaFinal": {
                     "type": "number",
                     "format": "double"
+                },
+                "RequisitoProgramaAcademicoId": {
+                    "$ref": "#/definitions/models.RequisitoProgramaAcademico"
                 }
             }
         },
@@ -1985,9 +1780,6 @@
                     "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string"
-                },
-                "Formato": {
                     "type": "string"
                 },
                 "Id": {
@@ -2024,10 +1816,7 @@
                     "type": "integer",
                     "format": "int64"
                 },
-                "PorcentajeEspecifico": {
-                    "type": "string"
-                },
-                "PorcentajeGeneral": {
+                "Porcentaje": {
                     "type": "number",
                     "format": "double"
                 },
@@ -2079,44 +1868,36 @@
             "description": "EstadoEntrevistaController operations for EstadoEntrevista\n"
         },
         {
+            "name": "tipo_entrevista",
+            "description": "TipoEntrevistaController operations for TipoEntrevista\n"
+        },
+        {
             "name": "requisito",
             "description": "RequisitoController operations for Requisito\n"
         },
         {
-            "name": "tipo_entrevista",
-            "description": "TipoEntrevistaController operations for TipoEntrevista\n"
+            "name": "requisito_programa_academico",
+            "description": "RequisitoProgramAcademicoController operations for RequisitoProgramaAcademico\n"
         },
         {
             "name": "evaluacion_inscripcion",
             "description": "EvaluacionInscripcionController operations for EvaluacionInscripcion\n"
         },
         {
-            "name": "entrevistador_entrevista",
-            "description": "EntrevistadorEntrevistaController operations for EntrevistadorEntrevista\n"
-        },
-        {
             "name": "entrevistador",
             "description": "EntrevistadorController operations for Entrevistador\n"
-        },
-        {
-            "name": "requisito_programa_academico",
-            "description": "RequisitoProgramaAcademicoController operations for RequisitoProgramaAcademico\n"
-        },
-        {
-            "name": "cupos_por_dependencia",
-            "description": "CuposPorDependenciaController operations for CuposPorDependencia\n"
         },
         {
             "name": "entrevista",
             "description": "EntrevistaController operations for Entrevista\n"
         },
         {
-            "name": "tr_archivo_icfes",
-            "description": "operations for TrArchivoIcfesController\n"
+            "name": "entrevistador_entrevista",
+            "description": "EntrevistadorEntrevistaController operations for EntrevistadorEntrevista\n"
         },
         {
-            "name": "detalle_evaluacion",
-            "description": "DetalleEvaluacionController operations for DetalleEvaluacion\n"
+            "name": "cupos_por_dependencia",
+            "description": "CuposPorDependenciaController operations for CuposPorDependencia\n"
         }
     ]
 }

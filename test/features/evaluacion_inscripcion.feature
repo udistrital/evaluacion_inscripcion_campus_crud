@@ -1,5 +1,5 @@
 Feature: Validate API responses
-  EVALUACION_INSCRIPCION_CAMPUS_CRUD
+  EVALUACION_INSCRIPCION_CRUD
   probe JSON reponses
 
 

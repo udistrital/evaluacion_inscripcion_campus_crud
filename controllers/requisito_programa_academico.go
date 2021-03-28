@@ -10,13 +10,13 @@ import (
 	"github.com/udistrital/evaluacion_inscripcion_campus_crud/models"
 )
 
-// RequisitoProgramaAcademicoController operations for RequisitoProgramaAcademico
-type RequisitoProgramaAcademicoController struct {
+// RequisitoProgramAcademicoController operations for RequisitoProgramaAcademico
+type RequisitoProgramAcademicoController struct {
 	beego.Controller
 }
 
 // URLMapping ...
-func (c *RequisitoProgramaAcademicoController) URLMapping() {
+func (c *RequisitoProgramAcademicoController) URLMapping() {
 	c.Mapping("Post", c.Post)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
@@ -31,7 +31,7 @@ func (c *RequisitoProgramaAcademicoController) URLMapping() {
 // @Success 201 {int} models.RequisitoProgramaAcademico
 // @Failure 400 the request contains incorrect syntax
 // @router / [post]
-func (c *RequisitoProgramaAcademicoController) Post() {
+func (c *RequisitoProgramAcademicoController) Post() {
 	var v models.RequisitoProgramaAcademico
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if _, err := models.AddRequisitoProgramaAcademico(&v); err == nil {
@@ -42,7 +42,6 @@ func (c *RequisitoProgramaAcademicoController) Post() {
 			//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
 			c.Data["system"] = err
 			c.Abort("400")
-
 		}
 	} else {
 		logs.Error(err)
@@ -60,7 +59,7 @@ func (c *RequisitoProgramaAcademicoController) Post() {
 // @Success 200 {object} models.RequisitoProgramaAcademico
 // @Failure 404 not found resource
 // @router /:id [get]
-func (c *RequisitoProgramaAcademicoController) GetOne() {
+func (c *RequisitoProgramAcademicoController) GetOne() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	v, err := models.GetRequisitoProgramaAcademicoById(id)
@@ -87,7 +86,7 @@ func (c *RequisitoProgramaAcademicoController) GetOne() {
 // @Success 200 {object} models.RequisitoProgramaAcademico
 // @Failure 404 not found resource
 // @router / [get]
-func (c *RequisitoProgramaAcademicoController) GetAll() {
+func (c *RequisitoProgramAcademicoController) GetAll() {
 	var fields []string
 	var sortby []string
 	var order []string
@@ -152,7 +151,7 @@ func (c *RequisitoProgramaAcademicoController) GetAll() {
 // @Success 200 {object} models.RequisitoProgramaAcademico
 // @Failure 400 the request contains incorrect syntax
 // @router /:id [put]
-func (c *RequisitoProgramaAcademicoController) Put() {
+func (c *RequisitoProgramAcademicoController) Put() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	v := models.RequisitoProgramaAcademico{Id: id}
@@ -182,7 +181,7 @@ func (c *RequisitoProgramaAcademicoController) Put() {
 // @Success 200 {string} delete success!
 // @Failure 404 not found resource
 // @router /:id [delete]
-func (c *RequisitoProgramaAcademicoController) Delete() {
+func (c *RequisitoProgramAcademicoController) Delete() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	if err := models.DeleteRequisitoProgramaAcademico(id); err == nil {

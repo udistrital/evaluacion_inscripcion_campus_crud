@@ -5,10 +5,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/udistrital/evaluacion_inscripcion_campus_crud/models"
-
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
+	"github.com/udistrital/evaluacion_inscripcion_campus_crud/models"
 )
 
 // EntrevistadorEntrevistaController operations for EntrevistadorEntrevista

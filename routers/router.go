@@ -22,15 +22,21 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/tipo_entrevista",
+			beego.NSInclude(
+				&controllers.TipoEntrevistaController{},
+			),
+		),
+
 		beego.NSNamespace("/requisito",
 			beego.NSInclude(
 				&controllers.RequisitoController{},
 			),
 		),
 
-		beego.NSNamespace("/tipo_entrevista",
+		beego.NSNamespace("/requisito_programa_academico",
 			beego.NSInclude(
-				&controllers.TipoEntrevistaController{},
+				&controllers.RequisitoProgramAcademicoController{},
 			),
 		),
 
@@ -40,27 +46,9 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/entrevistador_entrevista",
-			beego.NSInclude(
-				&controllers.EntrevistadorEntrevistaController{},
-			),
-		),
-
 		beego.NSNamespace("/entrevistador",
 			beego.NSInclude(
 				&controllers.EntrevistadorController{},
-			),
-		),
-
-		beego.NSNamespace("/requisito_programa_academico",
-			beego.NSInclude(
-				&controllers.RequisitoProgramaAcademicoController{},
-			),
-		),
-
-		beego.NSNamespace("/cupos_por_dependencia",
-			beego.NSInclude(
-				&controllers.CuposPorDependenciaController{},
 			),
 		),
 
@@ -70,14 +58,14 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/tr_archivo_icfes",
+		beego.NSNamespace("/entrevistador_entrevista",
 			beego.NSInclude(
-				&controllers.TrArchivoIcfesController{},
+				&controllers.EntrevistadorEntrevistaController{},
 			),
 		),
-		beego.NSNamespace("/detalle_evaluacion",
+		beego.NSNamespace("/cupos_por_dependencia",
 			beego.NSInclude(
-				&controllers.DetalleEvaluacionController{},
+				&controllers.CuposPorDependenciaController{},
 			),
 		),
 	)

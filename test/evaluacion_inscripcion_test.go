@@ -100,7 +100,7 @@ func gen_files() {
 
 //@run_bee activa el servicio de la api para realizar los test
 func run_bee() {
-	parametros := "EVALUACION_INSCRIPCION_HTTP_PORT=" + beego.AppConfig.String("httpport") + " EVALUACION_INSCRIPCION_CAMPUS_CRUD__PGUSER=" + beego.AppConfig.String("PGuser") + " EVALUACION_INSCRIPCION_CAMPUS_CRUD__PGPASS=" + beego.AppConfig.String("PGpass") + " EVALUACION_INSCRIPCION_CAMPUS_CRUD__PGURLS=" + beego.AppConfig.String("PGurls") + " EVALUACION_INSCRIPCION_CAMPUS_CRUD__PGDB=" + beego.AppConfig.String("PGdb") + " EVALUACION_INSCRIPCION_CAMPUS_CRUD__SCHEMA=" + beego.AppConfig.String("PGschemas") + " bee run"
+	parametros := "EVALUACION_INSCRIPCION_HTTP_PORT=" + beego.AppConfig.String("httpport") + " EVALUACION_INSCRIPCION_CRUD__PGUSER=" + beego.AppConfig.String("PGuser") + " EVALUACION_INSCRIPCION_CRUD__PGPASS=" + beego.AppConfig.String("PGpass") + " EVALUACION_INSCRIPCION_CRUD__PGURLS=" + beego.AppConfig.String("PGurls") + " EVALUACION_INSCRIPCION_CRUD__PGDB=" + beego.AppConfig.String("PGdb") + " EVALUACION_INSCRIPCION_CRUD__SCHEMA=" + beego.AppConfig.String("PGschemas") + " bee run"
 	file, err := os.Create("script.sh")
 	if err != nil {
 		log.Fatal("Cannot create file", err)
